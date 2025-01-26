@@ -1,0 +1,33 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="BGChangerScript">
+			<method name="SetToBackground"/>
+		</type>
+		<type fullname="OpenPong">
+			<method name="ClosePlayerMode"/>
+			<method name="Open1PlayerMode"/>
+			<method name="Open2PlayerMode"/>
+		</type>
+		<type fullname="PauseMenu">
+			<method name="ClosePause"/>
+			<method name="CloseShop"/>
+			<method name="OpenPause"/>
+			<method name="OpenShop"/>
+		</type>
+		<type fullname="ShopMenu">
+			<method name="BuyItem1"/>
+			<method name="BuyItem2"/>
+			<method name="BuyItem3"/>
+			<method name="BuyItem3"/>
+			<method name="BuyItem4"/>
+			<method name="BuyItem5"/>
+			<method name="BuyItem6"/>
+			<method name="OpenShop"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+</linker>
