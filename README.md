@@ -1,3 +1,3 @@
 # pong-deluxe
 pong game with shop where you can buy items which are beneficial
-file:///Users/jdrhea/Documents/Screenshot%202025-01-26%20at%203.59.25%E2%80%AFPM.png
+![image](https://github.com/user-attachments/assets/f9f56171-75db-476d-a7a6-589797d93058)
