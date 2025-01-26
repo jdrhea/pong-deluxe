@@ -405,13 +405,7 @@
         397,
         398,
         399,
-        400,
-        401,
-        402,
-        403,
-        404,
-        405,
-        406
+        400
       ],
       "AllowUnexpectedOutput": true,
       "DebugActionIndex": 0
@@ -13684,108 +13678,32 @@
       "DebugActionIndex": 380
     },
     {
-      "Annotation": "7z Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked",
-      "Action": "\"/Applications/2021.3.5f1/Unity.app/Contents/Tools/7za\" a -tgzip \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked\" \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js\"",
+      "Annotation": "CopyFiles docs/Build/docs.framework.js",
+      "ActionType": "CopyFiles",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js"
       ],
       "Outputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked"
+        "docs/Build/docs.framework.js"
       ],
       "ToBuildDependencies": [
         380
       ],
-      "OverwriteOutputs": false,
-      "AllowUnexpectedOutput": true,
       "DebugActionIndex": 381
     },
     {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/docs.framework.js.gz_84z6.info",
-      "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"WebGLPlayerBuildProgram.GzipMarker\",\"methodName\":\"Run\",\"assemblyLocation\":\"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe\",\"targets\":[\"docs/Build/docs.framework.js.gz\"],\"inputs\":[\"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked\"],\"targetDirectories\":[]}}",
-      "Inputs": [],
-      "Outputs": [
-        "Library/Bee/artifacts/csharpactions/docs.framework.js.gz_84z6.info"
-      ],
-      "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 382
-    },
-    {
-      "Annotation": "GzipMarker docs/Build/docs.framework.js.gz",
-      "Action": "\"/Applications/2021.3.5f1/Unity.app/Contents/Tools/netcorerun/netcorerun\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/Bee:/Applications/2021.3.5f1/Unity.app/Contents/Tools/BuildPipeline\" invoke_static_method \"Library/Bee/artifacts/csharpactions/docs.framework.js.gz_84z6.info\"",
-      "Inputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked",
-        "Library/Bee/artifacts/csharpactions/docs.framework.js.gz_84z6.info",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/modules.asset",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.pdb",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/.DS_Store",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.pdb",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
-      ],
-      "Outputs": [
-        "docs/Build/docs.framework.js.gz"
-      ],
-      "ToBuildDependencies": [
-        381,
-        382
-      ],
-      "AllowUnexpectedOutput": true,
-      "Env": [],
-      "DebugActionIndex": 383
-    },
-    {
-      "Annotation": "7z Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked",
-      "Action": "\"/Applications/2021.3.5f1/Unity.app/Contents/Tools/7za\" a -tgzip \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked\" \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm\"",
+      "Annotation": "CopyFiles docs/Build/docs.wasm",
+      "ActionType": "CopyFiles",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm"
       ],
       "Outputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked"
+        "docs/Build/docs.wasm"
       ],
       "ToBuildDependencies": [
         378
       ],
-      "OverwriteOutputs": false,
-      "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 384
-    },
-    {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/docs.wasm.gz_992u.info",
-      "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"WebGLPlayerBuildProgram.GzipMarker\",\"methodName\":\"Run\",\"assemblyLocation\":\"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe\",\"targets\":[\"docs/Build/docs.wasm.gz\"],\"inputs\":[\"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked\"],\"targetDirectories\":[]}}",
-      "Inputs": [],
-      "Outputs": [
-        "Library/Bee/artifacts/csharpactions/docs.wasm.gz_992u.info"
-      ],
-      "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 385
-    },
-    {
-      "Annotation": "GzipMarker docs/Build/docs.wasm.gz",
-      "Action": "\"/Applications/2021.3.5f1/Unity.app/Contents/Tools/netcorerun/netcorerun\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/Bee:/Applications/2021.3.5f1/Unity.app/Contents/Tools/BuildPipeline\" invoke_static_method \"Library/Bee/artifacts/csharpactions/docs.wasm.gz_992u.info\"",
-      "Inputs": [
-        "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked",
-        "Library/Bee/artifacts/csharpactions/docs.wasm.gz_992u.info",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/modules.asset",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.pdb",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/.DS_Store",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.pdb",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
-      ],
-      "Outputs": [
-        "docs/Build/docs.wasm.gz"
-      ],
-      "ToBuildDependencies": [
-        384,
-        385
-      ],
-      "AllowUnexpectedOutput": true,
-      "Env": [],
-      "DebugActionIndex": 386
+      "DebugActionIndex": 382
     },
     {
       "Annotation": "CopyFiles Temp/EditorBuildOutput/UnityLinkerToEditorData.json",
@@ -13799,7 +13717,7 @@
       "ToBuildDependencies": [
         2
       ],
-      "DebugActionIndex": 387
+      "DebugActionIndex": 383
     },
     {
       "Annotation": "CopyFiles Temp/EditorBuildOutput/MethodMap.tsv",
@@ -13813,7 +13731,7 @@
       "ToBuildDependencies": [
         3
       ],
-      "DebugActionIndex": 388
+      "DebugActionIndex": 384
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/webgl.data_qnm2.info",
@@ -13824,7 +13742,7 @@
         "Library/Bee/artifacts/csharpactions/webgl.data_qnm2.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 389
+      "DebugActionIndex": 385
     },
     {
       "Annotation": "Assemble WebGL Data Library/Bee/artifacts/WebGL/webgl.data",
@@ -13852,67 +13770,29 @@
       ],
       "ToBuildDependencies": [
         3,
-        389
+        385
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 390
+      "DebugActionIndex": 386
     },
     {
-      "Annotation": "7z Library/Bee/artifacts/WebGL/webgl.data.unmarked",
-      "Action": "\"/Applications/2021.3.5f1/Unity.app/Contents/Tools/7za\" a -tgzip \"Library/Bee/artifacts/WebGL/webgl.data.unmarked\" \"Library/Bee/artifacts/WebGL/webgl.data\"",
+      "Annotation": "CopyFiles docs/Build/docs.data",
+      "ActionType": "CopyFiles",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/webgl.data"
       ],
       "Outputs": [
-        "Library/Bee/artifacts/WebGL/webgl.data.unmarked"
+        "docs/Build/docs.data"
       ],
       "ToBuildDependencies": [
-        390
+        386
       ],
-      "OverwriteOutputs": false,
-      "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 391
-    },
-    {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/docs.data.gz_r4o7.info",
-      "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "{\"System.Object\":null,\"Bee.TundraBackend.CSharpActionInvocationInformation\":{\"typeFullName\":\"WebGLPlayerBuildProgram.GzipMarker\",\"methodName\":\"Run\",\"assemblyLocation\":\"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe\",\"targets\":[\"docs/Build/docs.data.gz\"],\"inputs\":[\"Library/Bee/artifacts/WebGL/webgl.data.unmarked\"],\"targetDirectories\":[]}}",
-      "Inputs": [],
-      "Outputs": [
-        "Library/Bee/artifacts/csharpactions/docs.data.gz_r4o7.info"
-      ],
-      "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 392
-    },
-    {
-      "Annotation": "GzipMarker docs/Build/docs.data.gz",
-      "Action": "\"/Applications/2021.3.5f1/Unity.app/Contents/Tools/netcorerun/netcorerun\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/Bee:/Applications/2021.3.5f1/Unity.app/Contents/Tools/BuildPipeline\" invoke_static_method \"Library/Bee/artifacts/csharpactions/docs.data.gz_r4o7.info\"",
-      "Inputs": [
-        "Library/Bee/artifacts/WebGL/webgl.data.unmarked",
-        "Library/Bee/artifacts/csharpactions/docs.data.gz_r4o7.info",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/modules.asset",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.pdb",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/.DS_Store",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.pdb",
-        "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
-      ],
-      "Outputs": [
-        "docs/Build/docs.data.gz"
-      ],
-      "ToBuildDependencies": [
-        391,
-        392
-      ],
-      "AllowUnexpectedOutput": true,
-      "Env": [],
-      "DebugActionIndex": 393
+      "DebugActionIndex": 387
     },
     {
       "Annotation": "PreprocessJS docs/Build/docs.loader.js",
-      "Action": "cd \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools\" && \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='/Users/jdrhea/pong\\x2ddeluxe/docs/Build/docs.loader.js'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Pong'\" \"PRODUCT_VERSION='1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='docs.data.gz'\" \"FRAMEWORK_FILENAME='docs.framework.js.gz'\" \"CODE_FILENAME='docs.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=true\" \"USE_WEBGL_2_0=true\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=33554432\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.5f1'\" \"LOADER_FILENAME='docs.loader.js'\"",
+      "Action": "cd \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools\" && \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='/Users/jdrhea/pong\\x2ddeluxe/docs/Build/docs.loader.js'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Pong'\" \"PRODUCT_VERSION='1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='docs.data'\" \"FRAMEWORK_FILENAME='docs.framework.js'\" \"CODE_FILENAME='docs.wasm'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=true\" \"USE_WEBGL_2_0=true\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=33554432\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.5f1'\" \"LOADER_FILENAME='docs.loader.js'\"",
       "Inputs": [
         "UnityLoader/UnityLoader.js"
       ],
@@ -13920,11 +13800,11 @@
         "docs/Build/docs.loader.js"
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 394
+      "DebugActionIndex": 388
     },
     {
       "Annotation": "PreprocessJS docs/index.html",
-      "Action": "cd \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools\" && \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html'\"  \"locals.outputPath='/Users/jdrhea/pong\\x2ddeluxe/docs/index.html'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Pong'\" \"PRODUCT_VERSION='1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='docs.data.gz'\" \"FRAMEWORK_FILENAME='docs.framework.js.gz'\" \"CODE_FILENAME='docs.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=true\" \"USE_WEBGL_2_0=true\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=33554432\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.5f1'\" \"LOADER_FILENAME='docs.loader.js'\"",
+      "Action": "cd \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools\" && \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html'\"  \"locals.outputPath='/Users/jdrhea/pong\\x2ddeluxe/docs/index.html'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Pong'\" \"PRODUCT_VERSION='1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='docs.data'\" \"FRAMEWORK_FILENAME='docs.framework.js'\" \"CODE_FILENAME='docs.wasm'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=true\" \"USE_WEBGL_2_0=true\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=33554432\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.5f1'\" \"LOADER_FILENAME='docs.loader.js'\"",
       "Inputs": [
         "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html"
       ],
@@ -13932,7 +13812,7 @@
         "docs/index.html"
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 395
+      "DebugActionIndex": 389
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/fullscreen-button.png",
@@ -13943,7 +13823,7 @@
       "Outputs": [
         "docs/TemplateData/fullscreen-button.png"
       ],
-      "DebugActionIndex": 396
+      "DebugActionIndex": 390
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/unity-logo-dark.png",
@@ -13954,7 +13834,7 @@
       "Outputs": [
         "docs/TemplateData/unity-logo-dark.png"
       ],
-      "DebugActionIndex": 397
+      "DebugActionIndex": 391
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/favicon.ico",
@@ -13965,7 +13845,7 @@
       "Outputs": [
         "docs/TemplateData/favicon.ico"
       ],
-      "DebugActionIndex": 398
+      "DebugActionIndex": 392
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/progress-bar-empty-light.png",
@@ -13976,7 +13856,7 @@
       "Outputs": [
         "docs/TemplateData/progress-bar-empty-light.png"
       ],
-      "DebugActionIndex": 399
+      "DebugActionIndex": 393
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/webgl-logo.png",
@@ -13987,11 +13867,11 @@
       "Outputs": [
         "docs/TemplateData/webgl-logo.png"
       ],
-      "DebugActionIndex": 400
+      "DebugActionIndex": 394
     },
     {
       "Annotation": "PreprocessJS docs/TemplateData/style.css",
-      "Action": "cd \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools\" && \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css'\"  \"locals.outputPath='/Users/jdrhea/pong\\x2ddeluxe/docs/TemplateData/style.css'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Pong'\" \"PRODUCT_VERSION='1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='docs.data.gz'\" \"FRAMEWORK_FILENAME='docs.framework.js.gz'\" \"CODE_FILENAME='docs.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=true\" \"USE_WEBGL_2_0=true\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=33554432\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.5f1'\" \"LOADER_FILENAME='docs.loader.js'\"",
+      "Action": "cd \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools\" && \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node\" \"/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css'\"  \"locals.outputPath='/Users/jdrhea/pong\\x2ddeluxe/docs/TemplateData/style.css'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Pong'\" \"PRODUCT_VERSION='1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='docs.data'\" \"FRAMEWORK_FILENAME='docs.framework.js'\" \"CODE_FILENAME='docs.wasm'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=true\" \"USE_WEBGL_2_0=true\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"TOTAL_MEMORY=33554432\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2021.3.5f1'\" \"LOADER_FILENAME='docs.loader.js'\"",
       "Inputs": [
         "/Applications/2021.3.5f1/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css"
       ],
@@ -13999,7 +13879,7 @@
         "docs/TemplateData/style.css"
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 401
+      "DebugActionIndex": 395
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/progress-bar-full-dark.png",
@@ -14010,7 +13890,7 @@
       "Outputs": [
         "docs/TemplateData/progress-bar-full-dark.png"
       ],
-      "DebugActionIndex": 402
+      "DebugActionIndex": 396
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/progress-bar-full-light.png",
@@ -14021,7 +13901,7 @@
       "Outputs": [
         "docs/TemplateData/progress-bar-full-light.png"
       ],
-      "DebugActionIndex": 403
+      "DebugActionIndex": 397
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/progress-bar-empty-dark.png",
@@ -14032,7 +13912,7 @@
       "Outputs": [
         "docs/TemplateData/progress-bar-empty-dark.png"
       ],
-      "DebugActionIndex": 404
+      "DebugActionIndex": 398
     },
     {
       "Annotation": "CopyFiles docs/TemplateData/unity-logo-light.png",
@@ -14043,7 +13923,7 @@
       "Outputs": [
         "docs/TemplateData/unity-logo-light.png"
       ],
-      "DebugActionIndex": 405
+      "DebugActionIndex": 399
     },
     {
       "Annotation": "Player",
@@ -14054,26 +13934,26 @@
         1,
         2,
         374,
+        381,
+        382,
         383,
-        386,
+        384,
         387,
         388,
+        389,
+        390,
+        391,
+        392,
         393,
         394,
         395,
         396,
         397,
         398,
-        399,
-        400,
-        401,
-        402,
-        403,
-        404,
-        405
+        399
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 406
+      "DebugActionIndex": 400
     }
   ],
   "FileSignatures": [
@@ -14442,7 +14322,7 @@
   ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 406
+          "Player": 400
         }
 ,  "DefaultNodes": [
     0
