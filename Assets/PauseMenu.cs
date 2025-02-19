@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro.Examples;
 using UnityEngine;
 
 
@@ -24,7 +23,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void OpenShop()
     {
-        
         isPaused = false;
         Time.timeScale = 0.05f;
     }

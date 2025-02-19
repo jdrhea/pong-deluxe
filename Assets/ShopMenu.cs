@@ -13,12 +13,24 @@ public class ShopMenu : MonoBehaviour
     public GameObject Wall;
     private float timer;
     private bool isCounting = false;
+    private float advertismentTimer;
+    private bool isAdvertismentCounting = false;
     public Text score;
+    AudioManager AudioManager;
 
     public GameObject BGChanger;
+    public GameObject Ad1;
+    public GameObject Ad2;
+    public GameObject Ad3;
+    public GameObject Ad4;
     
 
     //public Transform destination;
+    private void Awake()
+    {
+        AudioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+
+    }
 
     void Start()
     {
@@ -28,10 +40,12 @@ public class ShopMenu : MonoBehaviour
     }
     public void OpenShop()
     {
+        //AudioManager.PlaySFX(AudioManager.mouseclick);
         ShopUI.SetActive(true);
     }
     void Update()
-    {
+    { 
+       
         
         if (gameObject.CompareTag("shopui"))
         {    
@@ -52,7 +66,42 @@ public class ShopMenu : MonoBehaviour
             {
                 timer = 0;
                 isCounting = false;
-                Wall.SetActive(false);
+                
+            }
+            
+        }
+        if (isAdvertismentCounting)
+        {
+            advertismentTimer += Time.deltaTime;    
+            if (advertismentTimer >= 2)
+            {
+                advertismentTimer = 0;
+                isCounting = false;
+                int randomNum = Random.Range(1, 4);
+                if (randomNum == 1)
+                {
+                    Ad1.SetActive(true);
+                    isAdvertismentCounting = true;
+                    advertismentTimer = 0;
+                }
+                else if (randomNum == 2)
+                {
+                    Ad2.SetActive(true);
+                    isAdvertismentCounting = true;
+                    advertismentTimer = 0;
+                }
+                else if (randomNum == 3)
+                {
+                    Ad3.SetActive(true);
+                    isAdvertismentCounting = true;
+                    advertismentTimer = 0;
+                }
+                else if (randomNum == 4)
+                {
+                    Ad4.SetActive(true);
+                    isAdvertismentCounting = true;
+                    advertismentTimer = 0;
+                }
             }
             
         }
@@ -60,6 +109,7 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem1()
     {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 2)
         {
             Paddle1.gameObject.transform.localScale += new Vector3(0,2,0);
@@ -71,6 +121,7 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem2()
     {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 5)
         {
             VideoPlayer.gameObject.SetActive(true);
@@ -81,6 +132,7 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem3()
     {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 8)
         {
             PlayerMovement pm = GetComponent<PlayerMovement>();
@@ -100,6 +152,7 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem4()
     {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 10)
         {
             Ball.Score1 -= 10;
@@ -110,6 +163,7 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem5()
     {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 15)
         {
             Ball.Score1 -= 15;
@@ -121,6 +175,7 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem6()
     {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 20)
         {
             Ball.Score1 -= 20;
@@ -128,7 +183,6 @@ public class ShopMenu : MonoBehaviour
 
             if (b != null)
             {    
-                Ball.Score1 -= 8;
                 b.points = 2;
                 ScoreUpdate();
             }
@@ -139,6 +193,33 @@ public class ShopMenu : MonoBehaviour
             
         }
         
+    }
+    public void BuyItem7()
+    {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
+        if(Ball.Score1 >= 25)
+        {
+            isAdvertismentCounting = true;
+            Ball.Score1 -= 25;
+            ScoreUpdate();
+            Ball b = GetComponent<Ball>();
+
+            if (b != null)
+            {    
+                b.autopoints = 1;
+                ScoreUpdate();
+            }
+            else
+            {
+                Debug.LogError("Wow! you really are a dumb freaking brat for not attaching the script to the game object!");    
+            }  
+            
+        }
+
+    }
+    public void Test()
+    {
+        Debug.Log("Button Clicked");
     }
     private void ScoreUpdate()
     {
