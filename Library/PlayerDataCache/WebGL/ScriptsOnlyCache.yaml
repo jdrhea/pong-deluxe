@@ -7,6 +7,8 @@ ScriptsOnlyBuild:
     - OpenPong
     - PauseMenu
     - PlayerMovement
+    - PowerDownScript
+    - Poweups
     - ShopMenu
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -106,15 +108,30 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: BGChangerScript
     methodName: SetToBackground
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: ShopMenu
     methodName: BuyItem5
+  - assembly: Assembly-CSharp
+    fullTypeName: Ball
+    methodName: YesButton
   - assembly: Assembly-CSharp
     fullTypeName: Ball
     methodName: MouseClickPlay
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: OpenPause
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -145,9 +162,24 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopMenu
+    methodName: BuyItem8
   - assembly: Assembly-CSharp
     fullTypeName: Ball
-    methodName: ResetBall
+    methodName: LaunchButton
   - assembly: Assembly-CSharp
     fullTypeName: Ball
     methodName: MouseClickPlay
@@ -173,8 +205,17 @@ ScriptsOnlyBuild:
     fullTypeName: ShopMenu
     methodName: BuyItem6
   - assembly: Assembly-CSharp
+    fullTypeName: Ball
+    methodName: NoButton
+  - assembly: Assembly-CSharp
     fullTypeName: ShopMenu
     methodName: BuyItem7
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopMenu
+    methodName: BuyItem8
+  - assembly: Assembly-CSharp
+    fullTypeName: Poweups
+    methodName: BuyItem8
   sceneClasses:
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -202,29 +243,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 2342}
+      Script: {instanceID: 2344}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 3482}
+      Script: {instanceID: 3484}
     - Class: 114
-      Script: {instanceID: 4634}
+      Script: {instanceID: 4636}
     - Class: 114
-      Script: {instanceID: 4770}
+      Script: {instanceID: 4772}
     - Class: 114
-      Script: {instanceID: 5104}
+      Script: {instanceID: 5106}
     - Class: 114
-      Script: {instanceID: 6036}
+      Script: {instanceID: 6038}
     - Class: 114
-      Script: {instanceID: 6778}
+      Script: {instanceID: 6780}
     - Class: 114
-      Script: {instanceID: 7400}
+      Script: {instanceID: 7402}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -264,6 +305,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -274,38 +317,44 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 2754}
+      Script: {instanceID: 1608}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 3482}
+      Script: {instanceID: 3390}
     - Class: 114
-      Script: {instanceID: 5112}
+      Script: {instanceID: 3484}
     - Class: 114
-      Script: {instanceID: 5664}
+      Script: {instanceID: 5114}
     - Class: 114
-      Script: {instanceID: 6036}
+      Script: {instanceID: 5666}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6038}
     - Class: 114
-      Script: {instanceID: 6778}
+      Script: {instanceID: 6384}
     - Class: 114
-      Script: {instanceID: 6982}
+      Script: {instanceID: 6780}
     - Class: 114
-      Script: {instanceID: 7400}
+      Script: {instanceID: 6984}
     - Class: 114
-      Script: {instanceID: 7450}
+      Script: {instanceID: 7402}
+    - Class: 114
+      Script: {instanceID: 7452}
+    - Class: 114
+      Script: {instanceID: 9230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -341,6 +390,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 4683fba58fea5a0f00f9269b5c5b5b96
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerDownScript
   - hash:
       serializedVersion: 2
       Hash: 61f2059db36c32396c3d12077855592b
@@ -469,7 +524,7 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
-      Hash: fda8655944bff10a1598493b42007f7b
+      Hash: 10ac2b33ad393e59e43f206eaeb62e6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -535,7 +590,7 @@ ScriptsOnlyBuild:
     className: RuleOverrideTile
   - hash:
       serializedVersion: 2
-      Hash: 34cd36401636d8bad0603fc7f899100b
+      Hash: d190b2b76a9f7c87f03cb904c846ea72
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioManager
@@ -871,7 +926,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 4a664caf5c326b4ff67aa7298077363f
+      Hash: e1558aaec54a253b2a6386292c554b1f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopMenu
@@ -1171,7 +1226,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: b2bcdbc2c71fc02386d64dd1056bf2d0
+      Hash: 7842b3975814f6de3c43838980399266
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1421,6 +1476,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro
     className: TMP_PhoneNumberValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 5a05a7af6509fb371d29eb82e20cac02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Poweups
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

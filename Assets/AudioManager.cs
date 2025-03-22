@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip bonk;
     public AudioClip thump;
     public AudioClip mouseclick;
+    public AudioClip powerupSFX;
 
     public void PlaySFX(AudioClip clip)
     {

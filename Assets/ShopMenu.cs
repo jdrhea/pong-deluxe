@@ -11,10 +11,15 @@ public class ShopMenu : MonoBehaviour
     public GameObject Paddle1;
     public GameObject VideoPlayer;
     public GameObject Wall;
+
     private float timer;
+    public float greenappleTimer = 0;
+    private bool isGreenAppleCounting = false;
+
     private bool isCounting = false;
     private float advertismentTimer;
     private bool isAdvertismentCounting = false;
+
     public Text score;
     AudioManager AudioManager;
 
@@ -23,6 +28,9 @@ public class ShopMenu : MonoBehaviour
     public GameObject Ad2;
     public GameObject Ad3;
     public GameObject Ad4;
+
+    public bool isBall;
+
     
 
     //public Transform destination;
@@ -58,7 +66,7 @@ public class ShopMenu : MonoBehaviour
                 transform.Translate(Vector3.down * 40,Space.World);
             }
         }
-        if (isCounting)
+        if (isCounting) // if wall is being activated
         {
             timer += Time.deltaTime;    
             Wall.SetActive(true);
@@ -70,7 +78,7 @@ public class ShopMenu : MonoBehaviour
             }
             
         }
-        if (isAdvertismentCounting)
+        if (isAdvertismentCounting) // if advertisments are activated
         {
             advertismentTimer += Time.deltaTime;    
             if (advertismentTimer >= 2)
@@ -103,7 +111,32 @@ public class ShopMenu : MonoBehaviour
                     advertismentTimer = 0;
                 }
             }
+        
             
+        }
+        if (isGreenAppleCounting) // if the green apple powerup is there
+        {
+            greenappleTimer += Time.deltaTime;
+            Ball b = GetComponent<Ball>();
+            Paddle1.GetComponent<Renderer>().material.color = Color.yellow;
+            if (b != null)
+            {
+                b.leftPoints = 0;    
+                if (greenappleTimer >= 10)
+                {
+                    b.leftPoints = 1;
+                        
+                }
+
+            }
+            if (greenappleTimer >= 10)
+            {
+                greenappleTimer = 0;
+                isGreenAppleCounting = false;
+                Paddle1.GetComponent<Renderer>().material.color = Color.white;
+                
+                
+            }
         }
     
     }
@@ -183,7 +216,7 @@ public class ShopMenu : MonoBehaviour
 
             if (b != null)
             {    
-                b.points = 2;
+                b.points += 2;
                 ScoreUpdate();
             }
             else
@@ -194,6 +227,7 @@ public class ShopMenu : MonoBehaviour
         }
         
     }
+    
     public void BuyItem7()
     {
         AudioManager.PlaySFX(AudioManager.mouseclick);
@@ -206,7 +240,7 @@ public class ShopMenu : MonoBehaviour
 
             if (b != null)
             {    
-                b.autopoints = 1;
+                b.autopoints += 1;
                 ScoreUpdate();
             }
             else
@@ -216,6 +250,53 @@ public class ShopMenu : MonoBehaviour
             
         }
 
+    }
+    public void BuyItem8()
+    {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
+        if(Ball.Score1 >= 30)
+        {
+            Ball.Score1 -= 30;
+            ScoreUpdate();
+        }
+
+    }
+    public void BuyItem9()
+    {
+        AudioManager.PlaySFX(AudioManager.mouseclick);
+        if(Ball.Score1 >= 40)
+        {
+            Ball.Score1 -= 40;
+            Ball b = GetComponent<Ball>();
+
+            if (b != null)
+            {    
+                b.autopoints += 4;
+                b.points = -2;
+                ScoreUpdate();
+            } 
+            
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        AudioManager.PlaySFX(AudioManager.powerupSFX);
+        if (isBall)
+        {
+            if (collision.gameObject.tag == "greenapple")
+            {
+                isGreenAppleCounting = true;
+                
+            }
+            if (collision.gameObject.tag == "redapple")
+            {
+                Ball.Score1 += 1;
+                ScoreUpdate();
+            }
+            
+        }
+       
     }
     public void Test()
     {

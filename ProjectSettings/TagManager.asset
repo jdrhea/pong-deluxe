@@ -9,6 +9,11 @@ TagManager:
   - shopui
   - wall
   - AudioManager
+  - greenapple
+  - redapple
+  - fireball
+  - black hole
+  - paddle1
   layers:
   - Default
   - TransparentFX

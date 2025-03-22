@@ -305,6 +305,8 @@
 "Assets/OpenPong.cs"
 "Assets/PauseMenu.cs"
 "Assets/PlayerMovement.cs"
+"Assets/PowerDownScript.cs"
+"Assets/Poweups.cs"
 "Assets/ShopMenu.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

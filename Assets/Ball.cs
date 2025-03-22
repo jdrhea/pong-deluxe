@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro.Examples;
 using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
@@ -10,13 +11,62 @@ public class Ball : MonoBehaviour
     public Text score;
     public Text score2;
     public int points = 1; // Points for scoring a goal
+    public int leftPoints = 1; // Points for scoring a goal    
 
     public int autopoints = 0;
     public float autoclick = 0;
 
     public static int Score1 = 0; //score player1
-    private int Score2 = 0; // score player2
+    private static int Score2 = 0; // score player2
     private bool isCounting = false;
+
+    public Text Countdowntext;
+    public int countdown = 3;
+    //question
+    public GameObject question;
+
+    void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+        ScoreUpdate();
+        ScoreUpdateRight();
+        Countdown();
+        question.SetActive(true);
+    }
+    public void YesButton()
+    {
+        ScoreUpdateRight();
+        ScoreUpdate();
+        question.SetActive(false);
+    }
+    public void NoButton()
+    {
+        Score1 = 0;
+        Score2 = 0;
+        ScoreUpdateRight();
+        question.SetActive(false);
+        ScoreUpdate();
+    }
+    
+    public void Countdown()
+    {
+        if (countdown > 0)
+        {
+            Countdowntext.text = countdown.ToString();
+            countdown--;
+            Invoke("Countdown", 1);
+        }
+        else if (countdown == 0)
+        {
+            Countdowntext.text = "GO!";
+            Invoke("StartRound", 1); // Delay starting the round slightly after "GO!"
+            countdown--; // Ensure this block only runs once
+        }
+        else
+        {
+            Countdowntext.text = ""; // Clear countdown text after "GO!"
+        }
+    }
 
     AudioManager AudioManager;
 
@@ -30,11 +80,11 @@ public class Ball : MonoBehaviour
     {
         AudioManager.PlaySFX(AudioManager.mouseclick);
     }
-    void Start()
+    
+    public void StartRound()
     {
         Launch(); // Launch the ball in a random direction at the start
         ScoreUpdate();
-        Score1 = 0;
         autopoints = 0;
         isCounting = true;
     }
@@ -62,7 +112,7 @@ public class Ball : MonoBehaviour
     public void Launch()
     {
         // Generate a random launch direction
-        float randomAngle = Random.Range(1f, 1.5f * Mathf.PI); // Full circle in radians
+        float randomAngle = Random.Range(0f, 2f * Mathf.PI); // Full circle in radians
         Vector2 direction = new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)).normalized;
 
         rb2d.velocity = direction * speed;
@@ -80,8 +130,8 @@ public class Ball : MonoBehaviour
         }
         else if (collision.gameObject.tag == "leftgoal")
         {
-            Score2 += 1;
-            ScoreUpdateLeft();
+            Score2 += leftPoints;
+            ScoreUpdateRight();
             ResetBall();
             AudioManager.PlaySFX(AudioManager.bonk);
         }
@@ -95,12 +145,37 @@ public class Ball : MonoBehaviour
         }
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         if (collision.gameObject.tag == "greenapple")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "redapple")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Star")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
     
 
     public void ResetBall()
     {
         transform.position = Vector2.zero;
         Launch();
+    }
+    public void LaunchButton()
+    {
+        if(Score1 >= 3)
+        {
+            Score1 -= 3;
+            ScoreUpdate();
+            transform.position = Vector2.zero;
+            Launch();
+        }
     }
 
 
@@ -110,7 +185,7 @@ public class Ball : MonoBehaviour
         score.text = Score1.ToString();
     }
 
-    private void ScoreUpdateLeft()
+    private void ScoreUpdateRight()
     {
         score2.text = Score2.ToString();
     }
