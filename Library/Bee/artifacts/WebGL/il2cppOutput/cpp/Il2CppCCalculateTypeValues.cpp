@@ -46497,37 +46497,39 @@ struct PowerDownScript_tCDA9FB7F6CCC32AA764375F167FF9F9EE14752E8_StaticFields
 	bool ___startTimer_10;
 };
 
-// Poweups
-struct Poweups_t91A53DC61CC62E988C1529C2B33AD200139B10CC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+// Powerups
+struct Powerups_t9B1FF84A853AB1702DBB9D0D8A3BCEB29A27D94D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Int32 Poweups::powerupID
+	// System.Int32 Powerups::powerupID
 	int32_t ___powerupID_4;
-	// System.Int32 Poweups::powerdownID
+	// System.Int32 Powerups::powerdownID
 	int32_t ___powerdownID_5;
-	// System.Single Poweups::powerupDespawnTimer
+	// System.Single Powerups::powerupDespawnTimer
 	float ___powerupDespawnTimer_6;
-	// System.Single Poweups::powerupSpawnTimer
+	// System.Single Powerups::powerupSpawnTimer
 	float ___powerupSpawnTimer_7;
-	// UnityEngine.GameObject Poweups::powerupPrefab
+	// UnityEngine.GameObject Powerups::powerupPrefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___powerupPrefab_8;
-	// UnityEngine.GameObject Poweups::powerup1Prefab
+	// UnityEngine.GameObject Powerups::powerup1Prefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___powerup1Prefab_9;
-	// UnityEngine.GameObject Poweups::poowerDownPrefab
+	// UnityEngine.GameObject Powerups::poowerDownPrefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___poowerDownPrefab_10;
-	// UnityEngine.GameObject Poweups::powerDown2Prefab
+	// UnityEngine.GameObject Powerups::powerDown2Prefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___powerDown2Prefab_11;
-	// UnityEngine.GameObject Poweups::powerDown3Prefab
+	// UnityEngine.GameObject Powerups::powerDown3Prefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___powerDown3Prefab_12;
-	// UnityEngine.GameObject Poweups::cloneObject
+	// UnityEngine.GameObject Powerups::cloneObject
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cloneObject_13;
-	// UnityEngine.GameObject Poweups::cloneObject1
+	// UnityEngine.GameObject Powerups::cloneObject1
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cloneObject1_14;
-	// UnityEngine.GameObject Poweups::cloneObject2
+	// UnityEngine.GameObject Powerups::cloneObject2
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cloneObject2_15;
-	// UnityEngine.GameObject Poweups::cloneObject3
+	// UnityEngine.GameObject Powerups::cloneObject3
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cloneObject3_16;
-	// UnityEngine.GameObject Poweups::cloneObject4
+	// UnityEngine.GameObject Powerups::cloneObject4
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cloneObject4_17;
+	// System.Boolean Powerups::isStartingSpawn
+	bool ___isStartingSpawn_18;
 };
 
 // UnityEngine.UIElements.ProgressBar
@@ -46601,40 +46603,42 @@ struct ShopMenu_tA6012934AADEBBC5120255DAF0B2756D5B82DB88  : public MonoBehaviou
 {
 	// UnityEngine.GameObject ShopMenu::ShopUI
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ShopUI_4;
+	// UnityEngine.GameObject ShopMenu::ObjectSpawner
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ObjectSpawner_5;
 	// UnityEngine.GameObject ShopMenu::Paddle1
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Paddle1_5;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Paddle1_6;
 	// UnityEngine.GameObject ShopMenu::VideoPlayer
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___VideoPlayer_6;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___VideoPlayer_7;
 	// UnityEngine.GameObject ShopMenu::Wall
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Wall_7;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Wall_8;
 	// System.Single ShopMenu::timer
-	float ___timer_8;
+	float ___timer_9;
 	// System.Single ShopMenu::greenappleTimer
-	float ___greenappleTimer_9;
+	float ___greenappleTimer_10;
 	// System.Boolean ShopMenu::isGreenAppleCounting
-	bool ___isGreenAppleCounting_10;
+	bool ___isGreenAppleCounting_11;
 	// System.Boolean ShopMenu::isCounting
-	bool ___isCounting_11;
+	bool ___isCounting_12;
 	// System.Single ShopMenu::advertismentTimer
-	float ___advertismentTimer_12;
+	float ___advertismentTimer_13;
 	// System.Boolean ShopMenu::isAdvertismentCounting
-	bool ___isAdvertismentCounting_13;
+	bool ___isAdvertismentCounting_14;
 	// UnityEngine.UI.Text ShopMenu::score
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___score_14;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___score_15;
 	// AudioManager ShopMenu::AudioManager
-	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___AudioManager_15;
+	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___AudioManager_16;
 	// UnityEngine.GameObject ShopMenu::BGChanger
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___BGChanger_16;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___BGChanger_17;
 	// UnityEngine.GameObject ShopMenu::Ad1
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad1_17;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad1_18;
 	// UnityEngine.GameObject ShopMenu::Ad2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad2_18;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad2_19;
 	// UnityEngine.GameObject ShopMenu::Ad3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad3_19;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad3_20;
 	// UnityEngine.GameObject ShopMenu::Ad4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad4_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Ad4_21;
 	// System.Boolean ShopMenu::isBall
-	bool ___isBall_21;
+	bool ___isBall_22;
 };
 
 // System.Reflection.SignatureArrayType
@@ -55513,7 +55517,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3196 = { sizeof(PlayerMoveme
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3197;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3197 = { sizeof(PowerDownScript_tCDA9FB7F6CCC32AA764375F167FF9F9EE14752E8), -1, sizeof(PowerDownScript_tCDA9FB7F6CCC32AA764375F167FF9F9EE14752E8_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3198;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3198 = { sizeof(Poweups_t91A53DC61CC62E988C1529C2B33AD200139B10CC), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3198 = { sizeof(Powerups_t9B1FF84A853AB1702DBB9D0D8A3BCEB29A27D94D), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3199;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3199 = { sizeof(ShopMenu_tA6012934AADEBBC5120255DAF0B2756D5B82DB88), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3200;

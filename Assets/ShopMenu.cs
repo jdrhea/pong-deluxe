@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ShopMenu : MonoBehaviour
 {
     public GameObject ShopUI;
+    public GameObject ObjectSpawner;
     public GameObject Paddle1;
     public GameObject VideoPlayer;
     public GameObject Wall;
@@ -253,9 +254,15 @@ public class ShopMenu : MonoBehaviour
     }
     public void BuyItem8()
     {
+        Debug.Log("BuyItem8 called");
         AudioManager.PlaySFX(AudioManager.mouseclick);
         if(Ball.Score1 >= 30)
         {
+            Powerups p = ObjectSpawner.GetComponent<Powerups>();
+            if (p != null)
+            {
+                p.StartSpawning();
+            }
             Ball.Score1 -= 30;
             ScoreUpdate();
         }
